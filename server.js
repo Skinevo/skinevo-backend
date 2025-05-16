@@ -83,9 +83,7 @@ app.post("/analyze-skin", async (req, res) => {
           content: [
             {
               type: "text",
-              text: "iti dau 3 poze cu pielea mea analizeaza si zici cei cu ea roseata,cosurie  etc.. 
-
-"
+              text: "iti dau 3 poze cu pielea mea analizeaza si zici cei cu ea roseata,cosurie  etc.."
             },
             {
               type: "image_url",

@@ -76,14 +76,16 @@ app.post("/analyze-skin", async (req, res) => {
       messages: [
         {
           role: "system",
-          content: "You are a skincare expert specializing in acne treatment, pigmentation reduction, and redness management."
+          content: ""
         },
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: "Am acnee,si analizeaza te rog pielea mea, pete pigmentare și roșeață pe față, în special în zona obrajilor și frunții. Pielea mea este mixtă, sensibilă și predispusă la coșuri inflamate. Ce rutină zilnică îmi recomanzi, incluzând curățare, hidratare, tratamente și SPF? si etc.."
+              text: "iti dau 3 poze cu pielea mea analizeaza si zici cei cu ea roseata,cosurie  etc.. 
+
+"
             },
             {
               type: "image_url",

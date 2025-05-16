@@ -76,14 +76,14 @@ app.post("/analyze-skin", async (req, res) => {
       messages: [
         {
           role: "system",
-          content: ""
+          content: "Ești un asistent util care analizează imagini și oferă observații generale despre ceea ce vezi."
         },
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: "deci iti dau poze cu pielea mea descrie rosiata cosuriele etc.."
+              text: "Poți descrie această imagine în detaliu? Menționează culori, forme, texturi și orice alte elemente vizibile. Oferă o descriere generală, fără a face presupuneri medicale."
             },
             {
               type: "image_url",

@@ -87,7 +87,9 @@ app.post("/analyze-skin", async (req, res) => {
             },
             {
               type: "image_url",
-              image_url: base64ImageUrl
+              image_url: {
+                url: base64ImageUrl
+              }
             }
           ]
         }

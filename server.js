@@ -76,14 +76,14 @@ app.post("/analyze-skin", async (req, res) => {
       messages: [
         {
           role: "system",
-          content: "Ești un expert dermatolog. Analizează fotografia pielii și oferă o evaluare detaliată în limba română despre starea pielii, posibile probleme și recomandări de îngrijire. Structurează răspunsul în două secțiuni: analiza pielii și recomandări."
+          content: "You are a skincare expert specializing in acne treatment, pigmentation reduction, and redness management."
         },
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: "Analizează această imagine a feței mele și spune-mi starea pielii mele, ce probleme ai detectat și ce recomandări de îngrijire a pielii îmi sugerezi."
+              text: "Am probleme cu acnee, pete pigmentare și roșeață pe față. Îmi poți recomanda o rutină completă de skincare pentru aceste probleme, incluzând produse cu ingrediente active specifice?."
             },
             {
               type: "image_url",

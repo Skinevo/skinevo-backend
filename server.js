@@ -83,7 +83,7 @@ app.post("/analyze-skin", async (req, res) => {
           content: [
             {
               type: "text",
-              text: "Iti dau 3 poze cu pielea mea analizeaza si zici cei cu ea roseata etc.. "
+              text: "Am acnee,si analizeaza te rog pielea mea, pete pigmentare și roșeață pe față, în special în zona obrajilor și frunții. Pielea mea este mixtă, sensibilă și predispusă la coșuri inflamate. Ce rutină zilnică îmi recomanzi, incluzând curățare, hidratare, tratamente și SPF? si etc.."
             },
             {
               type: "image_url",

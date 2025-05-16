@@ -83,7 +83,7 @@ app.post("/analyze-skin", async (req, res) => {
           content: [
             {
               type: "text",
-              text: "Am probleme cu acnee, pete pigmentare și roșeață pe față. Îmi poți recomanda o rutină completă de skincare pentru aceste probleme, incluzând produse cu ingrediente active specifice?."
+              text: "Analizeaza aceste 3 poze si dami un rezultat ce e cu pielea mea, si niste sfaturi "
             },
             {
               type: "image_url",

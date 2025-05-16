@@ -59,7 +59,7 @@ app.post("/analyze-skin", async (req, res) => {
     
     // Pregătim datele pentru API-ul OpenAI
     const payload = {
-      model: "gpt-4-vision-preview",
+      model: "gpt-4o",
       messages: [
         {
           role: "system",

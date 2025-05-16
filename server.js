@@ -83,7 +83,7 @@ app.post("/analyze-skin", async (req, res) => {
           content: [
             {
               type: "text",
-              text: "iti dau 3 poze cu pielea mea analizeaza si zici cei cu ea roseata,cosurie  etc.."
+              text: "Descrie caracteristicile generale vizibile ale pielii mele (textură, hidratare aparentă, ten, nuanță) și sugerează produse cosmetice generale care ar putea ajuta la îmbunătățirea aspectului. Te rog să menționezi clar că acestea sunt doar observații non-medicale și sfaturi generale de îngrijire, nu diagnoze sau tratamente medicale."
             },
             {
               type: "image_url",

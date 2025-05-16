@@ -41,21 +41,34 @@ app.post("/analyze-skin", async (req, res) => {
     }
     
     // Folosim prima imagine disponibilă pentru analiză
-    let imageUrl = null;
+    let imageData = null;
+    let mimeType = "image/jpeg"; // Default mime type
+    
     if (photos.front) {
-      imageUrl = photos.front;
+      imageData = photos.front.base64;
+      mimeType = photos.front.mimeType || mimeType;
     } else if (photos.side) {
-      imageUrl = photos.side;
+      imageData = photos.side.base64;
+      mimeType = photos.side.mimeType || mimeType;
     } else {
-      imageUrl = Object.values(photos)[0]; // Luăm prima imagine din orice cameră
+      // Luăm prima imagine din orice cameră
+      const firstPhoto = Object.values(photos)[0];
+      if (firstPhoto && firstPhoto.base64) {
+        imageData = firstPhoto.base64;
+        mimeType = firstPhoto.mimeType || mimeType;
+      }
     }
     
-    if (!imageUrl) {
-      console.log('Error: No valid image URL found in request');
+    if (!imageData) {
+      console.log('Error: No valid image data found in request');
       return res.status(400).json({ error: 'No valid image provided' });
     }
     
     console.log('Calling OpenAI API for skin analysis...');
+    
+    // Formatare corectă a imaginii pentru gpt-4o
+    // Construim URL-ul data: conform formatului nou necesar
+    const base64ImageUrl = `data:${mimeType};base64,${imageData}`;
     
     // Pregătim datele pentru API-ul OpenAI
     const payload = {
@@ -74,9 +87,7 @@ app.post("/analyze-skin", async (req, res) => {
             },
             {
               type: "image_url",
-              image_url: {
-                url: imageUrl
-              }
+              image_url: base64ImageUrl
             }
           ]
         }
